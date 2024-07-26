@@ -10,7 +10,7 @@
 
 const googleTranslateConfig = {
 	/* Original language */
-	lang: "ru",
+	lang: "en",
 
 	/* Если хотите подписаться на событие "FinishTranslate" (Момент когда скрипт закончил перевод), расскоментируйте и добавьте любое проверочное слово на оригинальном языке */
 	/* If you want to subscribe to the "FinishTranslate" event (The moment when the script finished translating), uncomment and add any test word in the original language */
@@ -158,3 +158,5 @@ function TranslateMutationObserver(word, isOrigin) {
 		});
 	}
 }
+
+

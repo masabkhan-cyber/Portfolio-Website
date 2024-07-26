@@ -55,3 +55,67 @@ font > font {
 .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
     display: none !important;
 }
+
+
+/* Dropdown button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #4479ec;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    max-height: 300px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    padding: 5px;
+	color: black;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.language-name {
+    font-size: 12px;
+	color: black;
+}
+
+.dropdown-item:hover .language-name {
+    display: inline;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-button {
+    background-color: #3e8e41;
+}
+
