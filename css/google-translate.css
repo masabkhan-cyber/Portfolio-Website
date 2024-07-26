@@ -71,6 +71,7 @@ font > font {
     font-size: 12px;
     cursor: pointer;
     white-space: nowrap;
+    margin-left: 25%;
 }
 
 /* Dropdown content */
@@ -116,6 +117,6 @@ font > font {
 }
 
 .dropdown:hover .dropdown-button {
-    background-color: #3e8e41;
+    background-color: #ff7b00;
 }
 
