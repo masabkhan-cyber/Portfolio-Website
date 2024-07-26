@@ -210,13 +210,14 @@ header .navbar ul li a:hover {
 .home .image {
   flex: 1 1 40rem;
   z-index: 1;
+  text-align: center;
 }
 .home .image img {
-  width: 70%;
-  margin-left: 6rem;
+  width: 90%;
   border-radius: 10%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  text-align: center;
 }
 .home .image img:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -333,14 +334,68 @@ header .navbar ul li a:hover {
   }
   .home .image img {
     margin-top: -12rem;
-    width: 60%;
-    margin-left: 8rem;
+    width: 90%;
   }
   .home .content p {
     font-size: 2.2rem;
   }
   .home .content p span {
     font-size: 2.2rem;
+  }
+  .image img{
+    margin-top: 10% !important;
+  }
+  .content {
+    margin-top: 10% !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .home .btn {
+    margin: 4rem 0;
+  }
+  .socials {
+    margin-top: 12rem;
+  }
+  .home .image img {
+    margin-top: -12rem;
+    width: 90%;
+  }
+  .home .content p {
+    font-size: 2.2rem;
+  }
+  .home .content p span {
+    font-size: 2.2rem;
+  }
+  .image img{
+    margin-top: 10% !important;
+  }
+  .content {
+    margin-top: 10% !important;
+  }
+}
+@media (max-width: 768px) {
+  .home .btn {
+    margin: 4rem 0;
+  }
+  .socials {
+    margin-top: 12rem;
+  }
+  .home .image img {
+    margin-top: -12rem;
+    width: 90%;
+  }
+  .home .content p {
+    font-size: 2.2rem;
+  }
+  .home .content p span {
+    font-size: 2.2rem;
+  }
+  .image img{
+    margin-top: 10% !important;
+  }
+  .content {
+    margin-top: 10% !important;
   }
 }
 /* hero media queries ends*/
