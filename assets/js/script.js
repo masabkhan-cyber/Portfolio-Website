@@ -71,11 +71,11 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
+    strings: ["frontend development", "backend development", "web development", "Data Analysis", "Web Designing"],
     loop: true,
     typeSpeed: 50,
-    backSpeed: 25,
-    backDelay: 500,
+    backSpeed: 100,
+    backDelay: 1000,
 });
 // <!-- typed js effect ends -->
 

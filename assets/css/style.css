@@ -214,7 +214,7 @@ header .navbar ul li a:hover {
 .home .image img {
   width: 70%;
   margin-left: 6rem;
-  border-radius: 50%;
+  border-radius: 10%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
@@ -478,6 +478,8 @@ header .navbar ul li a:hover {
   padding: 2rem;
   width: 90%;
   margin: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
   margin-top: 2rem;
 }
 .skills .container .row {
@@ -1225,3 +1227,21 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+
+
+
+  ::-webkit-scrollbar {
+  width: 0.8rem;
+  }
+  
+  ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background: #420177;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background:rgb(54, 56, 58); }
