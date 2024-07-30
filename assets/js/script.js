@@ -100,14 +100,51 @@ function showSkills(skills) {
     skills.forEach(skill => {
         skillHTML += `
         <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
+            <div class="info">
+                <img src="${skill.icon}" alt="skill" />
                 <span>${skill.name}</span>
-              </div>
-            </div>`
+            </div>
+        </div>`;
     });
     skillsContainer.innerHTML = skillHTML;
+
+    const listOfCardElements = document.querySelectorAll('.bar');
+    const cardContainer = document.querySelector('.card-container');
+    
+    // Add click event listeners for manual scrolling
+    listOfCardElements.forEach((cardElement, index) => {
+        cardElement.addEventListener('click', () => {
+            const scrollLeft = index * listOfCardElements[0].offsetWidth;
+            cardContainer.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+        });
+    });
+
+    // Auto-play functionality
+    let currentIndex = 0;
+    const autoPlayInterval = 3000; // Auto-play interval in milliseconds (3 seconds)
+
+    function autoPlay() {
+        const totalItems = listOfCardElements.length;
+        if (totalItems > 0) {
+            const scrollLeft = currentIndex * listOfCardElements[0].offsetWidth;
+            cardContainer.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+            currentIndex = (currentIndex + 1) % totalItems;
+        }
+    }
+
+    // Start the auto-play
+    const autoPlayTimer = setInterval(autoPlay, autoPlayInterval);
+
+    // Optional: Pause auto-play on hover
+    cardContainer.addEventListener('mouseover', () => {
+        clearInterval(autoPlayTimer);
+    });
+
+    cardContainer.addEventListener('mouseout', () => {
+        setInterval(autoPlay, autoPlayInterval);
+    });
 }
+
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
