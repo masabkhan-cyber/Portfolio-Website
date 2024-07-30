@@ -133,17 +133,18 @@ function showSkills(skills) {
     }
 
     // Start the auto-play
-    const autoPlayTimer = setInterval(autoPlay, autoPlayInterval);
+    let autoPlayTimer = setInterval(autoPlay, autoPlayInterval);
 
-    // Optional: Pause auto-play on hover
+    // Pause auto-play on hover
     cardContainer.addEventListener('mouseover', () => {
         clearInterval(autoPlayTimer);
     });
 
     cardContainer.addEventListener('mouseout', () => {
-        setInterval(autoPlay, autoPlayInterval);
+        autoPlayTimer = setInterval(autoPlay, autoPlayInterval);
     });
 }
+
 
 
 function showProjects(projects) {
