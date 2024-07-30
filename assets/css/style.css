@@ -566,7 +566,6 @@ header .navbar ul li a:hover {
   gap: 1.8rem;
 }
 .skills .container .bar {
-  margin-bottom: 15px;
   padding: 10px;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -580,6 +579,30 @@ header .navbar ul li a:hover {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 375px) {
+  .skills .container .bar {
+    min-width: 290px; /* Set min width of card */
+  }
+}
+
+@media (min-width: 376px) {
+  .skills .container .bar {
+    min-width: 320px; /* Set min width of card */
+  }
+}
+
+@media (min-width: 390px) {
+  .skills .container .bar {
+    min-width: 300px; /* Set min width of card */
+  }
+}
+
+@media (min-width: 430px) {
+  .skills .container .bar {
+    min-width: 332px; /* Set min width of card */
+  }
+}
+
 .skills .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
   background-color: rgba(0, 0, 0, 0.9) !important;
@@ -616,7 +639,6 @@ header .navbar ul li a:hover {
     margin-top: 5px;
     margin: 0 auto;
     width: 90%;
-    padding: 5%;
   }
 }
 
@@ -654,7 +676,7 @@ header .navbar ul li a:hover {
 .card-container {
   width: 100%; /* Width of card container */
   display: flex; /* Set inline elements */
-  margin: 8px; /* Set margin */
+  margin: 0 auto; /* Set margin */
   overflow-x: auto; /* Set overflow in horizontal scroll */
   overflow-y: hidden; /* Hidden overflow in vertical scroll */
   scroll-snap-type: x mandatory; /* Force the scroll to snap to the start of a scroll-snap area */
@@ -665,6 +687,39 @@ header .navbar ul li a:hover {
 .card-container::-webkit-scrollbar {
   display: none; /* Hide scrollbar in Chrome, Safari and Opera */
 }
+
+/* Base button styles */
+button.arrow {
+  background: transparent; /* No background color */
+  border: none;            /* Remove border */
+  padding: 0;              /* Remove padding */
+  cursor: pointer;         /* Pointer cursor on hover */
+  display: flex;           /* Flexbox for centering */
+  align-items: center;     /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  transition: color 0.3s;  /* Smooth color transition */
+}
+
+/* Icon styles */
+button.arrow i {
+  font-size: 1.5rem;       /* Size of the icon */
+  color: #f5f1f1;             /* Subtle dark color */
+}
+
+/* Optional: Hover effect */
+button.arrow:hover i {
+  color: #000;             /* Slightly darker color on hover */
+}
+
+/* Optional: Focus effect for accessibility */
+button.arrow:focus {
+  outline: none;           /* Remove default focus outline */
+}
+
+button.arrow:focus i {
+  color: #000;             /* Darker color on focus */
+}
+
 
 /* skills media queries ends*/
 /* skills section ends */
@@ -1360,3 +1415,5 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+
