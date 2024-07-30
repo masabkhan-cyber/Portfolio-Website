@@ -110,7 +110,7 @@ function showSkills(skills) {
 
     const listOfCardElements = document.querySelectorAll('.bar');
     const cardContainer = document.querySelector('.card-container');
-    
+
     // Add click event listeners for manual scrolling
     listOfCardElements.forEach((cardElement, index) => {
         cardElement.addEventListener('click', () => {
@@ -143,7 +143,29 @@ function showSkills(skills) {
     cardContainer.addEventListener('mouseout', () => {
         autoPlayTimer = setInterval(autoPlay, autoPlayInterval);
     });
+
+    // Arrow navigation functionality
+    const prevArrow = document.querySelector('.arrow.prev');
+    const nextArrow = document.querySelector('.arrow.next');
+
+    function scrollToIndex(index) {
+        const totalItems = listOfCardElements.length;
+        if (totalItems > 0) {
+            currentIndex = (index + totalItems) % totalItems;
+            const scrollLeft = currentIndex * listOfCardElements[0].offsetWidth;
+            cardContainer.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+        }
+    }
+
+    prevArrow.addEventListener('click', () => {
+        scrollToIndex(currentIndex - 1);
+    });
+
+    nextArrow.addEventListener('click', () => {
+        scrollToIndex(currentIndex + 1);
+    });
 }
+
 
 
 
