@@ -60,29 +60,43 @@ $(document).ready(function () {
     // <!-- emailjs to mail contact form data -->
 
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    var formData = new FormData(this);
-
-    fetch('send_email.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text())
-    .then(result => {
-        if (result === 'success') {
-            alert('Thank you for your message. We will get back to you soon!');
-            document.getElementById('contact-form').reset();
-        } else {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        var formData = new FormData(this);
+        var loadingIndicator = document.getElementById('loading-indicator');
+        var loadingText = document.getElementById('loading-text');
+    
+        // Show the loading indicator
+        loadingIndicator.style.display = 'flex';
+        loadingText.textContent = 'Loading...'; // Initial loading text
+    
+        fetch('send_email.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+            if (result === 'success') {
+                loadingText.textContent = 'Sent'; // Update text to "Sent"
+                setTimeout(() => {
+                    alert('Thank you for your message. We will get back to you soon!');
+                    document.getElementById('contact-form').reset();
+                    loadingIndicator.style.display = 'none'; // Hide the indicator after a short delay
+                }, 1000); // Delay for "Sent" to be visible for a moment
+            } else {
+                alert('Sorry, something went wrong. Please try again later.');
+                loadingIndicator.style.display = 'none'; // Hide the indicator if an error occurs
+            }
+        })
+        .catch(error => {
             alert('Sorry, something went wrong. Please try again later.');
-        }
-    })
-    .catch(error => {
-        alert('Sorry, something went wrong. Please try again later.');
-        console.error('Error:', error);
+            console.error('Error:', error);
+            loadingIndicator.style.display = 'none'; // Hide the indicator if an error occurs
+        });
     });
-});
+    
+    
 
 
 });
