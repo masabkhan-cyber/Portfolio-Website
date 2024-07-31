@@ -39,25 +39,51 @@ $(document).ready(function () {
 
     // <!-- emailjs to mail contact form data -->
     // Initialize EmailJS with your user ID
-emailjs.init("cqrl0rs6uqOVu0ica");
+//emailjs.init("cqrl0rs6uqOVu0ica");
 
 // Handle form submission
-$("#contact-form").submit(function (event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+//$("#contact-form").submit(function (event) {
+   // event.preventDefault(); // Prevent the default form submission behavior
 
     // Use emailjs.sendForm to send form data
-    emailjs.sendForm("service_02ll3ls", "template_wpuql0a", this)
-        .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-            document.getElementById("contact-form").reset();
-            alert("Form Submitted Successfully");
-        }, function (error) {
-            console.log('FAILED...', error);
-            alert("Form Submission Failed! Try Again");
-        });
-});
+   // emailjs.sendForm("service_02ll3ls", "template_wpuql0a", this)
+      //  .then(function (response) {
+        //    console.log('SUCCESS!', response.status, response.text);
+        //    document.getElementById("contact-form").reset();
+        //    alert("Form Submitted Successfully");
+     //   }, function (error) {
+           // console.log('FAILED...', error);
+           // alert("Form Submission Failed! Try Again");
+      //  });
+//});
 
     // <!-- emailjs to mail contact form data -->
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    var formData = new FormData(this);
+
+    fetch('send_email.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(result => {
+        if (result === 'success') {
+            alert('Thank you for your message. We will get back to you soon!');
+            document.getElementById('contact-form').reset();
+        } else {
+            alert('Sorry, something went wrong. Please try again later.');
+        }
+    })
+    .catch(error => {
+        alert('Sorry, something went wrong. Please try again later.');
+        console.error('Error:', error);
+    });
+});
+
 
 });
 
