@@ -74,7 +74,7 @@ header {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 }
 section {
-  min-height: 50vh;
+  min-height: 30vh;
   padding: 2rem 9%;
 }
 .heading {
@@ -230,7 +230,7 @@ header .navbar ul li a:hover {
 .home .content h2 span {
   font-size: 5rem;
   font-weight: 800;
-  color: #ff7b00;
+  color: #00acedb3;
 }
 .home .content p {
   font-size: 2.5rem;
@@ -239,8 +239,8 @@ header .navbar ul li a:hover {
   padding: 1rem 0;
 }
 .home .content p span {
-  font-size: 2.5rem;
-  color: rgb(148, 8, 8);
+  font-size: 2rem;
+  color: rgb(40, 143, 228);
   font-weight: 600;
   padding: 1rem 0;
 }
@@ -444,8 +444,8 @@ header .navbar ul li a:hover {
   margin: 4rem;
   width: 30rem;
   height: auto;
-  border-radius: 5%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  /*border-radius: 5%;*/
+  /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6); */
   mix-blend-mode: luminosity;
   transition: 0.3s;
   cursor: pointer;
@@ -578,27 +578,38 @@ header .navbar ul li a:hover {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 375px) {
+/* For screens 360px wide and above */
+@media (min-width: 340px) {
   .skills .container .bar {
-    min-width: 290px; /* Set min width of card */
+    min-width: 100%; /* Set min width of card to 100% */
   }
 }
 
-@media (min-width: 376px) {
-  .skills .container .bar {
-    min-width: 320px; /* Set min width of card */
-  }
-}
-
-@media (min-width: 390px) {
-  .skills .container .bar {
-    min-width: 300px; /* Set min width of card */
-  }
-}
-
+/* For screens 430px wide and above */
 @media (min-width: 430px) {
   .skills .container .bar {
-    min-width: 332px; /* Set min width of card */
+    min-width: 100%; /* Set min width of card to 100% */
+  }
+}
+
+/* For screens 768px wide and above */
+@media (min-width: 768px) {
+  .skills .container .bar {
+    min-width: 32%; /* Set min width of card to 50% */
+  }
+}
+
+/* For screens 768px wide and above */
+@media (min-width: 1024px) {
+  .skills .container .bar {
+    min-width: 32.5%; /* Set min width of card to 50% */
+  }
+}
+
+/* For screens 768px wide and above */
+@media (min-width: 1025px) {
+  .skills .container .bar {
+    min-width: 24.5%; /* Set min width of card to 50% */
   }
 }
 
@@ -717,6 +728,12 @@ button.arrow:focus {
 
 button.arrow:focus i {
   color: #000;             /* Darker color on focus */
+}
+
+@media (max-width: 768px) {
+  button.arrow {
+    display: none;         /* Hide the button on mobile screens */
+  }
 }
 
 

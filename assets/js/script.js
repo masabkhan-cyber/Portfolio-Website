@@ -116,12 +116,14 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web development", "Data Analysis", "Web Designing"],
+    strings: ["Your Future With Data & Code"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 100,
     backDelay: 1000,
-});
+    showCursor: false // This hides the cursor
+  });
+  
 // <!-- typed js effect ends -->
 
 async function fetchData(type = "skills") {
