@@ -34,10 +34,10 @@ html::-webkit-scrollbar {
   width: 0.8rem;
 }
 html::-webkit-scrollbar-track {
-  background: rgb(235, 202, 245);
+  background: rgb(185, 185, 185);
 }
 html::-webkit-scrollbar-thumb {
-  background: #420177;
+  background: #363333c5;
 }
 
 /* pre loader start */
@@ -613,10 +613,11 @@ header .navbar ul li a:hover {
   }
 }
 
-.skills .container .bar:hover {
-  /*box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important; */
-  /*background-color: rgba(0, 0, 0, 0.9) !important; */
-}
+/*.skills .container .bar:hover {
+  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important; 
+  background-color: rgba(0, 0, 0, 0.9) !important; 
+}*/
+
 .skills .container .bar .info {
   display: flex;
   flex-direction: column;
