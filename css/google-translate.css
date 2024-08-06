@@ -64,11 +64,11 @@ font > font {
 }
 
 .dropdown-button {
-    background-color: #4479ec;
-    color: white;
+    background-color: transparent !important;
+    color: black !important;
     border: none;
     padding: 12px;
-    font-size: 12px;
+    font-size: 24px;
     cursor: pointer;
     white-space: nowrap;
     margin-left: 25%;
@@ -117,6 +117,7 @@ font > font {
 }
 
 .dropdown:hover .dropdown-button {
-    background-color: #ff7b00;
+    background-color: transparent !important;
+    color: #4d90fe;
 }
 

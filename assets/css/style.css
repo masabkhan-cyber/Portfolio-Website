@@ -84,7 +84,7 @@ section {
   text-align: center;
 }
 .heading span {
-  color: rgb(115, 3, 167);
+  color:#4d90fe;
 }
 header .logo {
   font-size: 1.9rem;
@@ -138,7 +138,7 @@ header .navbar ul li a:hover {
     position: fixed;
     top: 6.5rem;
     right: -120%;
-    width: 75%;
+    width: 50%;
     height: 100%;
     text-align: left;
     align-items: flex-start;
@@ -230,7 +230,7 @@ header .navbar ul li a:hover {
 .home .content h2 span {
   font-size: 5rem;
   font-weight: 800;
-  color: #00acedb3;
+  color: #4d90fe;
 }
 .home .content p {
   font-size: 2.5rem;
@@ -252,7 +252,7 @@ header .navbar ul li a:hover {
   border-radius: 4em;
   transition: 0.5s;
   color: #fff;
-  background: #2506ad;
+  background: #4d90fe;
   box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
 }
@@ -290,7 +290,7 @@ header .navbar ul li a:hover {
   font-size: 2rem;
   display: inline-block;
   line-height: 44px;
-  color: #00d9ff;
+  color: #4d90fe;
   background-color: #09011b;
   width: 44px;
   height: 44px;
@@ -398,7 +398,7 @@ header .navbar ul li a:hover {
     margin-top: 10% !important;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 993px) {
   .home .btn {
     margin: 4rem 0;
   }
@@ -485,17 +485,17 @@ header .navbar ul li a:hover {
   text-transform: none;
 }
 .about .row .content .box-container .box p span {
-  color: #011aff;
+  color: #4d90fe;
 }
 .resumebtn {
   margin-top: 6rem;
 }
 .resumebtn .btn {
   padding: 1.7rem 3rem;
-  border-radius: 0.5em;
+  border-radius: 2.5em;
   transition: 0.3s;
   color: #fff;
-  background: #2506ad;
+  background: #4d90fe;
   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
 }
@@ -547,7 +547,7 @@ header .navbar ul li a:hover {
   color: #fff;
 }
 .skills .heading span {
-  color: rgb(255, 230, 0);
+  color: #4d90fe;
 }
 .skills .container {
   background: rgba(0, 0, 0, 0.0);
@@ -719,7 +719,7 @@ button.arrow i {
 
 /* Optional: Hover effect */
 button.arrow:hover i {
-  color: #000;             /* Slightly darker color on hover */
+  color: #4d90fe;             /* Slightly darker color on hover */
 }
 
 /* Optional: Focus effect for accessibility */
@@ -848,125 +848,7 @@ button.arrow:focus i {
 /* education media queries ends*/
 /* education section ends */
 
-/* work section starts */
-.work {
-  /* background: #010124; */
-  background: #fff;
-}
-.work h2 {
-  color: #fff;
-  padding: 1rem;
-}
-.work .heading span {
-  color: rgb(255, 230, 0);
-}
-.work .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 2rem;
-}
-.work .box-container .box {
-  flex: 1 1 30rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-  height: 30rem;
-}
-.work .box-container .box img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.work .box-container .box .content {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 85%;
-  left: 0;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  flex-direction: column;
-}
-.work .box-container .box .content .tag {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 4.5rem;
-  width: 100%;
-  padding-left: 1rem;
-  background: #ffd900;
-}
-.work .box-container .box .content .tag h3 {
-  font-size: 2rem;
-}
-.work .box-container .box:hover .content {
-  top: 25%;
-}
-.work .desc {
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.work .desc p {
-  font-size: 1.5rem;
-}
-.work .desc .btns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
-}
-.work .desc .btns .btn {
-  line-height: 0;
-  display: inline;
-  padding: 1.5rem 2.5rem;
-  border-radius: 0.5rem;
-  font-size: 1.5rem;
-  color: #fff;
-  background: rgb(12, 12, 12);
-  margin-right: 2rem;
-}
-.work .desc .btns .btn:hover {
-  background: #310ae0f5;
-}
-.work .viewall {
-  display: flex;
-  justify-content: center;
-}
-.work .viewall .btn {
-  position: relative;
-  line-height: 0;
-  padding: 1.6rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.5s;
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  border: 2px solid #fff;
-  box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
-  text-align: center;
-}
-.work .viewall .btn span {
-  font-weight: 600;
-  font-size: 1.7rem;
-  font-family: "Nunito", sans-serif;
-}
-.work .viewall .btn i {
-  margin-left: 0.3rem;
-  font-size: 1.5rem;
-  transition: 0.3s;
-}
-.work .viewall .btn:hover {
-  background: #fff;
-  color: #000;
-}
-.work .viewall .btn:hover i {
-  transform: translateX(5px);
-}
-/* work section ends */
+
 
 /* experience section starts */
 .experience .timeline {
@@ -1248,15 +1130,15 @@ form .button-area {
   outline: none;
   font-size: 1.8rem;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 80px;
   padding: 13px 25px;
-  background: #2506ad;
+  background: #4d90fe;
   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   transition: 0.3s ease;
   font-family: "Nunito", sans-serif;
 }
 .button-area button:hover {
-  background: #421cecf5;
+  background: #032d7af5;
 }
 .button-area span {
   font-size: 17px;
@@ -1325,7 +1207,7 @@ form .button-area {
 }
 .footer .box-container .box p i {
   padding-right: 1rem;
-  color: #ffae00;
+  color: #4d90fe;
 }
 .footer .box-container .box a {
   font-size: 1.5rem;
@@ -1334,7 +1216,7 @@ form .button-area {
   display: block;
 }
 .footer .box-container .box a:hover {
-  color: #ffae00;
+  color: #7cbaf8;
 }
 .footer .box-container .box .share {
   display: flex;
@@ -1370,7 +1252,7 @@ form .button-area {
   border-top: 0.1rem solid #fff3;
 }
 .footer .credit a {
-  color: #ffae00;
+  color: #4d90fe;
 }
 .footer .fa {
   color: #e90606;
@@ -1422,7 +1304,7 @@ form .button-area {
   right: 2rem;
   padding: 1rem 1.5rem;
   font-size: 2rem;
-  background: #ffae00;
+  background: #4d90fe;
   color: rgb(13, 0, 44);
   border-radius: 50%;
   transition: 1s linear;
@@ -1798,6 +1680,14 @@ h1, .h1 {
 
 
 /* Section Team */
+.team {
+  background: #fff;
+}
+
+.team h2 {
+  color: #000;
+}
+
 
 .row-team {
   display: flex;
@@ -1822,7 +1712,7 @@ h1, .h1 {
 .card-team .img-container-team {
   width: 8em;
   height: 8em;
-  background-color: #a993ff;
+  background-color: #6290f3;
   padding: 0.5em;
   border-radius: 50%;
   margin: 0 auto 2em auto;
@@ -1853,7 +1743,7 @@ h1, .h1 {
   font-size: 1.4em;
 }
 .card-team:hover {
-  background: linear-gradient(#6045ea, #8567f7);
+  background: linear-gradient(#4587ea, #23a3df);
   color: #ffffff;
 }
 .card-team:hover .img-container-team {
@@ -1872,7 +1762,7 @@ h1, .h1 {
     padding: 5em 1em;
   }
   .column-team {
-    flex: 0 0 33.33%;
+    flex: 0 0 25%;
     max-width: 33.33%;
     padding: 0 1em;
   }
